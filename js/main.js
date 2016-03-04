@@ -37,6 +37,7 @@ var writeBerries = function (berries) {
 
   berries.forEach(function (berry) {
     document.write('<h2>' + berry.name + '</h2>');
+    document.write('<dl>');
     document.write('<dt>Grows On a Shrub?</dt>');
     document.write('<dt>Energy</dt>');
     document.write('<dd>' + berry.energy + '</dd>');
@@ -45,13 +46,17 @@ var writeBerries = function (berries) {
     document.write('<dt>Protein</dt>');
     document.write('<dd>' + berry.protein + '</dd>');
 
+    document.write('<dd>');
+
     if (berry.onShrub) {
       document.write('Yes');
     } else {
       document.write('No');
     }
 
-    document.write('<dd>');
+    document.write('</dd>');
+
+    document.write('</dl>');
 
   });
 };
